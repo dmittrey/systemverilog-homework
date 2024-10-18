@@ -31,6 +31,19 @@ module mux_4_1
   // Task:
   // Using code for mux_2_1 as an example,
   // write code for 4:1 mux using the "if" statement
+always_comb
+  begin
+  if (sel[1] == 0 && sel[0] == 0)
+    assign y = d0;
 
+  if (sel[1] == 0 && sel[0] == 1)
+    assign y = d1;
+
+  if (sel[1] == 1 && sel[0] == 0)
+    assign y = d2;
+
+  if (sel[1] == 1 && sel[0] == 1)
+    assign y = d3;
+  end
 
 endmodule

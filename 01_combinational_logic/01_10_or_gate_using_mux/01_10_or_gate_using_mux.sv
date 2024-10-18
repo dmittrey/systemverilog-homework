@@ -25,9 +25,15 @@ module or_gate_using_mux
 );
 
   // Task:
-
   // Implement or gate using instance(s) of mux,
   // constants 0 and 1, and wire connections
+  /*
+       b
+  a ---|
+       | --- o
+  b ---|
+  */
+  mux inst1 (a, b, b, o);
 
 
 endmodule
